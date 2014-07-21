@@ -1,0 +1,283 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"set",
+				"setup	setup"
+			],
+			[
+				"ligh",
+				"lightOption"
+			],
+			[
+				"add",
+				"addProperty"
+			],
+			[
+				"dimm",
+				"dimmerLayer"
+			],
+			[
+				"load",
+				"os.loadavg"
+			],
+			[
+				"for",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"f",
+				"for	for (…) {…}"
+			],
+			[
+				"cur",
+				"curLightCtrl"
+			],
+			[
+				"next",
+				"nextKey"
+			],
+			[
+				"curl",
+				"curLayer"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"proc",
+				"Set Syntax: Processing"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"beau",
+				"Javascript Beautify"
+			],
+			[
+				"beaut",
+				"Javascript Beautify"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"pa",
+				"Package Control: Disable Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				":w - Save"
+			],
+			[
+				"mini",
+				"Minify Javascript"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"bea",
+				"Javascript Beautify"
+			],
+			[
+				"lint",
+				"SublimeLinter: Clear Caches"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"package",
+				"Package Control: Enable Package"
+			],
+			[
+				"pacak",
+				"Package Control: List Packages"
+			],
+			[
+				"packa",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 507.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/SFBurning/Downloads/kelly-wpcom/functions.php",
+		"/Users/SFBurning/Downloads/kelly-wpcom/index.php",
+		"/Users/SFBurning/Google Drive/WayPoints/WayPoints_v05.js",
+		"/Users/SFBurning/Library/Preferences/Ableton/Live 9.1/Options.txt",
+		"/Applications/Adobe After Effects CC 2014/Scripts/ScriptUI Panels/AthenaHealth_AutoRig_V03.jsx",
+		"/Users/SFBurning/Desktop/Node Test/NodeTest.js",
+		"/Users/SFBurning/Google Drive/WayPoints/AthenaHealth_AutoRig_V03.jsx",
+		"/Users/SFBurning/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/SFBurning/Google Drive/WayPoints/WayPoints_v02.js",
+		"/Extra/org.chameleon.Boot.plist"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\"",
+			"curLight"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "build.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

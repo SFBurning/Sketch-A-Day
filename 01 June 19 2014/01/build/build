@@ -1,0 +1,36 @@
+// How the fuck do pixels work
+
+SweetBall ball1; 
+SweetBall ball2; 
+
+void setup() {
+	size(512, 512);
+	background(grey);
+	ball1 = new SweetBall(40, width*0.25, height/2);
+	ball2 = new SweetBall(40, (width*0.75), height/2); 
+}
+
+void draw() {
+	ball1.display();
+
+	ball2.display();
+}
+
+class SweetBall{
+    float t; // Noise for perlin
+    float r;
+    float x,y;
+	SweetBall(float r_, float x_, float y_) {  
+		r = r_;
+		x = x_;
+		y = y_;
+		t = random(0, 100);
+	}
+
+	void display() {
+		t += 0.1;
+		r = r + (noise(t) * 80);
+		fill(255, 30, 60);
+		ellipse(x, y, r,r);
+	}
+}
