@@ -1,32 +1,45 @@
 BCtrl control; 
 
+// Setup, Bitch!
 void setup() {
-	background(5);
 	size(600,600);
 	control = new BCtrl(width/4, height/2, (width/4)*3, height/2, 12);
 }
 
+// Draw, Bitch!
 void draw() {
+	background(5);
 	control.display();
 }
 
-
+// MousePressed
 void mousePressed() {
+	// Perform click operations
 	control.cp1.clicked(mouseX, mouseY);
 	control.cp2.clicked(mouseX, mouseY);
+	control.vt1.clicked(mouseX, mouseY);
+	control.vt2.clicked(mouseX, mouseY);
 }
 
+// MouseReleased
 void mouseReleased() {
+	// Make sure everything stops dragging when the mouse is released
 	control.cp1.stopDragging();
 	control.cp2.stopDragging();
+	control.vt1.stopDragging();
+	control.vt2.stopDragging();
 }
 
+// This bezier control class will also spawn instances of the ControlVertex class
+// This is responsible for calling the functions of our two CV instances, and drawing the curve 
 class BCtrl {
 
 	float x1, x2;
 	float y1, y2;
-	ControlPoint cp1;
-	ControlPoint cp2; 
+	// Control Points
+	ControlPoint cp1, cp2;
+	// Vertices
+	ControlPoint vt1, vt2; 
 
 	BCtrl(float x1_, float y1_, float x2_, float y2_, float r_) {
 
@@ -36,18 +49,31 @@ class BCtrl {
 		float y1 = y1_;
 		float y2 = y2_;
 
-		ControlPoint cp1 = new ControlPoint(x1, y1, r);
-		ControlPoint cp2 = new ControlPoint(x2, y2, r);
+		cp1 = new ControlPoint(x1, y1, r);
+		cp2 = new ControlPoint(x2, y2, r);
+		vt1 = new ControlPoint(width/4, height/3, 20);
+		vt2 = new ControlPoint((width/4)*3, height/3, 20);
+
 
 	}
 
 	void display() {
+		noFill();
+		stroke(255, 0, 0);
+		strokeWeight(5);
+		curve(this.cp1.x, cp1.y, vt1.x, vt1.y, vt2.x, vt2.y, cp2.x, cp2.y);
 		cp1.rollover(mouseX, mouseY);
 		cp2.rollover(mouseX, mouseY);
+		vt1.rollover(mouseX, mouseY);
+		vt2.rollover(mouseX, mouseY);
 		cp1.drag(mouseX, mouseY);
 		cp2.drag(mouseX, mouseY);
+		vt1.drag(mouseX, mouseY);
+		vt2.drag(mouseX, mouseY);
 		cp1.display();
 		cp2.display();
+		vt1.display();
+		vt2.display();
 	}
 
 
