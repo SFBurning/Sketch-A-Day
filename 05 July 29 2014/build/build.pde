@@ -1,5 +1,5 @@
 void setup() {
-	
+	size(600);
 }
 
 void draw() {
@@ -16,7 +16,7 @@ class Bar {
 
 	// Constructor
 	Bar(float total_) {
-		p = p_;
+		total = total_;
 
 	}
 
@@ -33,12 +33,33 @@ class Bar {
 		segments[index].addValue(amount);
 	}
 
+	void updateData() {
+		// Cycle through the values of the segment totals, and figure out their percentages
+		total = 0;
+		for(int i = 0; i<segments.length; i++) {
+			total += segments[i].subtotal; 
+		}
+		// Cycle through again, now assigning the appropriate percentage
+		for(int i = 0; i<segments.length; i++) {
+			segments[i].assignPercent((segments[i].subtotal)/total);
+		}
+	}
+
+	void animate() {
+		for(int i = 0; i < segments.length; i++) {
+			
+		}
+	}
+
 };
 
-class Segment extends Bar {
+public class Segment {
 	// Data
 	float subtotal;
-	color c; 
+	color c;
+	float percent;
+	boolean mouseOver;
+
 	// Constructor 
 	Segment(float subtotal_) {
 		// Set the initial value
@@ -48,7 +69,11 @@ class Segment extends Bar {
 
 	//Add value
 	void addValue(float amount) {
-		p+=amount;
+		subtotal+=amount;
+	}
+
+	void assignPercent(float tempPercent) {
+		percent = tempPercent; 
 	}
 
 
