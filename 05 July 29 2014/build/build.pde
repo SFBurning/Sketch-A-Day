@@ -1,9 +1,13 @@
+Bar theBar;
+
 void setup() {
-	size(600);
+	size(600, 600);
+	// Initialize globals
+	theBar = new Bar(3);
 }
 
 void draw() {
-	
+		
 }
 
 class Bar {
@@ -15,8 +19,11 @@ class Bar {
 	Segment[] segments = new Segment[0];
 
 	// Constructor
-	Bar(float total_) {
-		total = total_;
+	Bar(int numSegments) {
+		for(int i = 0; i < numSegments; i++) {
+			// To construct an initial bar, create a new segments each of whom has an equal value
+			append(segments, new Segment(100/numSegments));
+		}
 
 	}
 
@@ -46,9 +53,12 @@ class Bar {
 	}
 
 	void animate() {
-		for(int i = 0; i < segments.length; i++) {
-			
-		}
+		// Global container
+		noFill();
+		stroke(230);
+		strokeWeight(7);
+		rectMode(CENTER);
+		rect(width/2, height/2, width-(width/5), 25);
 	}
 
 };
@@ -59,6 +69,8 @@ public class Segment {
 	color c;
 	float percent;
 	boolean mouseOver;
+	// position containers for the cube
+
 
 	// Constructor 
 	Segment(float subtotal_) {
@@ -76,5 +88,5 @@ public class Segment {
 		percent = tempPercent; 
 	}
 
-
+	
 };
