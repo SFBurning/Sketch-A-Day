@@ -57,8 +57,11 @@ public class Segment {
 	// Data
 	float subtotal;
 	color c;
-	float percent;
+	float percent; 
+	// if the mouse is over the segment
 	boolean mouseOver;
+	// Data stores for rect()
+	float px, py, w, h;
 
 	// Constructor 
 	Segment(float subtotal_) {
