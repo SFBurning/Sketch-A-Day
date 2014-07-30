@@ -1,9 +1,12 @@
+Bar theBar = new Bar(6);
+
 void setup() {
 	size(600, 600);
 }
 
 void draw() {
-	
+	background(0);
+	theBar.animate();
 }
 
 class Bar {
@@ -48,7 +51,7 @@ class Bar {
 
 	void animate() {
 		for(int i = 0; i < segments.length; i++) {
-			
+			segments[i].display(); 
 		}
 	}
 
@@ -69,6 +72,11 @@ public class Segment {
 		// Set the initial value
 		subtotal = subtotal_;
 		c = color(random(0,255), random(0,255), random(0,255));
+		// Dummy values for position
+		px = random(20, width-20);
+		py = random(20, height-20);
+		w = 100;
+		h = 25;
 	}
 
 	//Add value
@@ -87,11 +95,11 @@ public class Segment {
 		noFill();
 	}
 
-	void setValues(px_, py_, w_, h_) {
+	void setValues(float px_,float py_,float w_,float h_) {
 		px = px_;
 		py = py_;
 		w = w_;
-		h = h_
+		h = h_;
 	}
 
 
