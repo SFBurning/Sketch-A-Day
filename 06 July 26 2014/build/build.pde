@@ -42,6 +42,7 @@ class Bar {
 		// Cycle through again, now assigning the appropriate percentage
 		for(int i = 0; i<segments.length; i++) {
 			segments[i].assignPercent((segments[i].subtotal)/total);
+
 		}
 	}
 
@@ -77,6 +78,20 @@ public class Segment {
 
 	void assignPercent(float tempPercent) {
 		percent = tempPercent; 
+	}
+
+	void display() {
+		fill(c);
+		rect(px, py, w, h);
+		// Safety
+		noFill();
+	}
+
+	void setValues(px_, py_, w_, h_) {
+		px = px_;
+		py = py_;
+		w = w_;
+		h = h_
 	}
 
 
