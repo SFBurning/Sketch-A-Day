@@ -25,6 +25,8 @@ class Mover {
 	Mover() {
 		location = new PVector(random(width), random(height));
 		velocity = new PVector(random(-70,70),random(-70, 70));
+		println("velocity.x: "+velocity.x);
+		println("velocity.y: "+velocity.y);
 		oldPos = new float[200][2];
 		diameter = 50; 
 		for(int i = 0; i < oldPos.length; i++) {
